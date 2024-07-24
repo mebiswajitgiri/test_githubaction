@@ -12,5 +12,4 @@ jobs:
         python-version: 3.9
     - name: Run Test
       run: |
-        cd /src
         python test.py
