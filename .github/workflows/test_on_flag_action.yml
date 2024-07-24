@@ -2,7 +2,7 @@ name: test-action-on-flag
 on:
   push:
     branches:
-    - main
+    - master
 
 jobs:
   stage:
