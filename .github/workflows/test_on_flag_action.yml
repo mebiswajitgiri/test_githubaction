@@ -1,10 +1,19 @@
 name: test-action-on-flag
-on: [push]
+on:
+    push:
+        branches:
+        - main
 
 jobs:
     stage:
         runs-on: ubuntu-latest
         steps:
-        - uses: checkout:v2
-        - name: Set up python
-            uses: 
+            - uses: actions/checkout:v2
+            - name: Set up python
+              uses: actions/setup-python@v5.1.1
+              with:
+                python-version: 3.9
+            - name: Run Test2
+              run: |
+                  python test2.py
+            
