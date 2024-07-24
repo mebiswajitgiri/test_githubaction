@@ -1,0 +1,16 @@
+name: test_github_action
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v5.1.1
+      with:
+        python-version: 3.10
+    - name: Run Test
+      run: |
+        cd src
+        python test.py
