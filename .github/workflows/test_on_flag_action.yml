@@ -1,0 +1,10 @@
+name: test-action-on-flag
+on: [push]
+
+jobs:
+    stage:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: checkout:v2
+        - name: Set up python
+            uses: 
